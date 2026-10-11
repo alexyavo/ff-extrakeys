@@ -1,0 +1,53 @@
+{
+  "manifest_version": 3,
+  "name": "ff-extrakeys",
+  "version": "0.2.0",
+  "description": "tmux-style leader-key shortcuts for Firefox and Waterfox.",
+  "author": "alexyavo",
+  "homepage_url": "https://github.com/alexyavo/ff-extrakeys",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "ff-extrakeys@alexyavo",
+      "strict_min_version": "142.0",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
+    }
+  },
+  "icons": {
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png",
+    "128": "icons/icon-128.png"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "background": {
+    "scripts": [
+      "common/settings.js",
+      "common/bindings.js",
+      "background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "common/settings.js",
+        "common/bindings.js",
+        "content.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true,
+      "match_about_blank": true
+    }
+  ],
+  "options_ui": {
+    "page": "options/options.html",
+    "open_in_tab": false
+  }
+}

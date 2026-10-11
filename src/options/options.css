@@ -1,0 +1,57 @@
+body {
+  font: message-box;
+  margin: 0;
+  padding: 12px;
+  min-width: 320px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.row > span {
+  flex: 1;
+}
+
+#leader {
+  width: 10em;
+  text-align: center;
+  cursor: pointer;
+}
+
+#leader:focus {
+  outline: 2px solid highlight;
+}
+
+#timeout {
+  width: 6em;
+}
+
+h2 {
+  font-size: 1em;
+  margin: 16px 0 6px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td {
+  padding: 3px 10px 3px 0;
+}
+
+kbd {
+  font: inherit;
+  padding: 1px 5px;
+  border: 1px solid currentColor;
+  border-radius: 3px;
+  opacity: 0.85;
+}
+
+.hint {
+  margin: 14px 0 0;
+  opacity: 0.7;
+}

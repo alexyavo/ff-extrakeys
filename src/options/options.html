@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>ff-extrakeys options</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <form id="options" autocomplete="off">
+      <label class="row">
+        <input type="checkbox" id="enabled" />
+        Enabled
+      </label>
+
+      <label class="row">
+        <span>Leader key</span>
+        <input type="text" id="leader" readonly placeholder="Click, then press keys" />
+        <button type="button" id="leader-reset">Reset</button>
+      </label>
+
+      <label class="row">
+        <span>Leader timeout (ms, 0 = none)</span>
+        <input type="number" id="timeout" min="0" step="100" />
+      </label>
+
+      <h2>Bindings</h2>
+      <table id="bindings"></table>
+
+      <p class="hint">
+        Shortcuts work inside web pages only, not on <code>about:</code> pages
+        or while the address bar has focus.
+      </p>
+    </form>
+
+    <script src="../common/settings.js"></script>
+    <script src="../common/bindings.js"></script>
+    <script src="options.js"></script>
+  </body>
+</html>

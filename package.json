@@ -1,0 +1,16 @@
+{
+  "name": "ff-extrakeys",
+  "version": "0.2.0",
+  "private": true,
+  "description": "tmux-style leader-key shortcuts for Firefox and Waterfox.",
+  "scripts": {
+    "start": "web-ext run",
+    "lint": "web-ext lint",
+    "build": "web-ext build --filename {name}-{version}.xpi",
+    "sign": "web-ext sign --channel listed",
+    "sign:unlisted": "web-ext sign --channel unlisted"
+  },
+  "devDependencies": {
+    "web-ext": "^10.7.0"
+  }
+}
