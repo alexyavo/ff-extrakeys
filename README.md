@@ -37,11 +37,14 @@ src/                     the extension itself (this is what gets packaged)
   content.js             runs in pages: leader detection, key capture, badge
   background.js          runs commands that need tabs/windows APIs
   options/               preferences UI
-  icons/                 PNG icons generated from assets/icon.svg
-assets/icon.svg          icon source (rsvg-convert -w 96 -h 96 assets/icon.svg -o ...)
+  icons/                 PNG icons generated from assets/icon.png
+assets/icon.png          full-size source for the extension and AMO icons
 docs/PUBLISHING.md       how to publish on addons.mozilla.org
 web-ext-config.mjs       web-ext settings (points `run` at the local Waterfox)
 ```
+
+To regenerate a packaged icon, run `sips -z 128 128 assets/icon.png --out
+src/icons/icon-128.png` (use 48 or 96 for the other sizes).
 
 To add a shortcut: add an entry to `BINDINGS` in `src/common/bindings.js` and a
 matching handler to `COMMANDS` in `src/background.js`.
